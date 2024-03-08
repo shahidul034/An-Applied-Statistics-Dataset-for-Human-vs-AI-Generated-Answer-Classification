@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask HTML Buttons</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="centered-div">
+            <h1>Student Dashboard</h1>
+            <div style="padding:20px">
+                <p class="title-div">Student Name</p>
+            </div>
+            <form action="/generate_questions" method="post">
+                <button type="submit">Generate Questions</button>
+            </form>
+            <!-- implement generate question here to the follwing scrolling div-->
+            <div class="scrollable-text-container">
+                <div class="scrollable-text-container">
+                    {% if question_list %}
+                    <ul>
+                        {% for question in question_list %}
+                        <li>{{ question }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% else %}
+                    <p>No questions available.</p>
+                    {% endif %}
+
+                </div>
+
+            </div>
+            <form name="teacher" value="teacher" action="/download" method="post">
+                <button type="submit">Download</button>
+            </form>
+            <form action="/upload" method="post">
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I agree to upload the file 
+                    <br>and consent to the collection
+                    <br>and use of my data for education purpose.
+                </label>
+                <br>
+                <button name="teacher" value="teacher" type="submit">Upload</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+
+</html>

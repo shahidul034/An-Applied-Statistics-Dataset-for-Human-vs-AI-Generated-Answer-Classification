@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask HTML Buttons</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="centered-div">
+            <h1>Teacher dashboard</h1>
+            <div style="padding:20px">
+                <div style="padding:20px">
+                    <p class="title-div">Teacher Name</p>
+                </div>
+                <form action="/download" method="post">
+                    <label for="student">No. of Student</label>
+                    <input type="text" id="student" name="student" required><br>
+                    <label for="question">No. of questions to assign</label>
+                    <input type="text" id="question" name="question" required>
+                    <button class="button" type="submit">Download demo file</button>
+                </form>
+                <label>Upload your xlsx file:</label>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" value="file">
+                    <button name="teacher" value="teacher" class="button" type="submit">Upload</button>
+                    <br>
+                    <button name="file_merge" value="file_merge" class="button" type="submit">Merge all the files</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
