@@ -1,10 +1,12 @@
 
 # An Applied Statistics Dataset for Human vs AI-Generated Answer Classification
-
+## Project Description
 We have developed a dataset of 4231 question-and-answer pairs for Applied Statistics, which includes 116 questions selected by domain experts and answers provided by 100 students and 50 AI-generated responses using ChatGPT. Our dataset can be used to develop AI detectors for the Applied Statistics domain and to evaluate existing ones. Additionally, our data collection framework can be applied to other domains.
 
 
-## Installation
+
+
+## Install and Run the Project
 
 ```bash
   conda create -n asd python=3.10
@@ -12,16 +14,11 @@ We have developed a dataset of 4231 question-and-answer pairs for Applied Statis
   pip install flask -q
   pip install datasets -q
 ```
-    
-## Deployment
-
-To deploy this project run
 
 ```bash
   python "source code\main.py"
 ```
-
-
+    
 ## Flow diagram
 
 ![alt text](https://github.com/shahidul034/An-Applied-Statistics-Dataset-for-Human-vs-AI-Generated-Answer-Classification/blob/main/flowchartV4.png)
@@ -29,7 +26,7 @@ To deploy this project run
 
 https://data.mendeley.com/datasets/mh892rksk2
 
-
+https://www.sciencedirect.com/science/article/pii/S2352340924002117
 ## Acknowledgements
 ```
 @article{SALIM2024110240,
